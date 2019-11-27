@@ -18,6 +18,9 @@ package com.example.android.miwok;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -38,11 +41,33 @@ public class NumbersActivity extends AppCompatActivity {
         word.add("tree");
         word.add("four");
         word.add("five");
-        Log.v("NumbersActivity","word index 0 is:"+word.get(0));
-        Log.v("NumbersActivity","word index 0 is:"+word.get(1));
-        Log.v("NumbersActivity","word index 0 is:"+word.get(2));
-        Log.v("NumbersActivity","word index 0 is:"+word.get(3));
-        Log.v("NumbersActivity","word index 0 is:"+word.get(4));
-        Log.v("NumbersActivity","word index 0 is:"+word.get(5));
+        word.add("six");
+        word.add("seven");
+        word.add("heith");
+        word.add("nine");
+        word.add("than");
+        // Find the root view so we can add child views to it
+       LinearLayout rootView = (LinearLayout)findViewById(R.id.rootView);
+        // Create a variable to keep track of the current index position
+       int index = 0;
+
+        // Keep looping until we've reached the end of the list (which means keep looping
+        // as long as the current index position is less than the length of the list)
+
+        while (index < word.size()) {
+
+            // Create a new TextView
+
+            TextView wordView = new TextView(this);
+// Set the text to be word at the current index
+            wordView.setText(word.get(index));
+
+            // Add this TextView as another child to the root view of this layout
+            rootView.addView(wordView);
+
+            // Increment the index variable by 1
+            index++;
+
+        }
     }
-}
+    }
