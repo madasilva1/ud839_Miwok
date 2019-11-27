@@ -17,6 +17,10 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+
+
+import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
 
@@ -24,5 +28,21 @@ public class NumbersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
+
+
+        ArrayList<String> word = new ArrayList<String>();
+
+        word.add("zero");
+        word.add("one");
+        word.add("two");
+        word.add("tree");
+        word.add("four");
+        word.add("five");
+        Log.v("NumbersActivity","word index 0 is:"+word.get(0));
+        Log.v("NumbersActivity","word index 0 is:"+word.get(1));
+        Log.v("NumbersActivity","word index 0 is:"+word.get(2));
+        Log.v("NumbersActivity","word index 0 is:"+word.get(3));
+        Log.v("NumbersActivity","word index 0 is:"+word.get(4));
+        Log.v("NumbersActivity","word index 0 is:"+word.get(5));
     }
 }
