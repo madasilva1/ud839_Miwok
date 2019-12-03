@@ -1,7 +1,10 @@
 package com.example.android.miwok;
 
 public class Word {
+    //string value
     private String mDefaultTranslation;
+
+    /** Miwok translation for the word */
     private String mMiwokTranslation;
 
     /**
